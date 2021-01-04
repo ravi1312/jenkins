@@ -7,6 +7,7 @@ pipeline{
             }
             steps{
                 echo "building master"
+                echo "example"
             }
         }
         stage('building dev'){
