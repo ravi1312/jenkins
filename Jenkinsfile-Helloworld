@@ -5,7 +5,6 @@ pipeline{
             steps{
                 echo "Hello World"
                 echo "this is for deployment"
-                echo "sample"
             }
         }
     }
