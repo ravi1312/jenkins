@@ -23,7 +23,7 @@ pipeline{
                 echo 'hello'
               //  sh 'git ls-files . -d -m -o --exclude-standard --full-name -v'
               //  sh 'git ls-files -z | xargs -0 -n1 -I{} -- git log -1 --format="%ai {}" {} | sort'
-                sh "git diff --name-only HEAD~3"
+                sh "git log --oneline --pretty="format:" --name-only | awk 'NF' | sort -u"
                 sh """
                 git log --pretty=format:'%h  -  %s  -  %cr  -  %an' --abbrev-commit --since=1.hour --name-only
                 """
