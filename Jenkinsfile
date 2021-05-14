@@ -25,10 +25,11 @@ pipeline{
               //  sh 'git ls-files -z | xargs -0 -n1 -I{} -- git log -1 --format="%ai {}" {} | sort'
                 sh """
                 git log --pretty=format: --abbrev-commit --since=1.hour --name-only > output.txt
+                cat output.txt
                 """
-                sh """
-                git log --pretty=format:'%h  -  %s  -  %cr  -  %an' --abbrev-commit --since=1.hour --name-only
-                """
+             //   sh """
+               // git log --pretty=format:'%h  -  %s  -  %cr  -  %an' --abbrev-commit --since=1.hour --name-only
+                //"""
             }
         }
     }
