@@ -26,6 +26,9 @@ pipeline{
                 sh """
                 git log --pretty=format: --abbrev-commit --since=1.hour --name-only > output.txt
                 cat output.txt
+                git add output.txt
+                git commit -m "test"
+                git push https://ravi1312:ravi@131231@ravi1312/Jenkins_shared_libraries.git
                 """
              //   sh """
                // git log --pretty=format:'%h  -  %s  -  %cr  -  %an' --abbrev-commit --since=1.hour --name-only
