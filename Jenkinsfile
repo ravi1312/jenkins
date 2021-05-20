@@ -21,7 +21,7 @@ pipeline{
         stage('test'){
             steps{
                 echo 'hello'
-                echo "branch"
+                echo "testing smee"
               //  sh 'git ls-files . -d -m -o --exclude-standard --full-name -v'
               //  sh 'git ls-files -z | xargs -0 -n1 -I{} -- git log -1 --format="%ai {}" {} | sort'
                 sh """
