@@ -26,7 +26,7 @@ pipeline{
               //  sh 'git ls-files -z | xargs -0 -n1 -I{} -- git log -1 --format="%ai {}" {} | sort'
                 sh """
                 git log --merges --name-only --first-parent
-                git log --pretty=format: --abbrev-commit -10 --name-only
+                git log --merges --pretty=format: --abbrev-commit -10 --name-only --first-parent
 
                 """
              //   sh """
