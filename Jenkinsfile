@@ -25,7 +25,7 @@ pipeline{
               //  sh 'git ls-files . -d -m -o --exclude-standard --full-name -v'
               //  sh 'git ls-files -z | xargs -0 -n1 -I{} -- git log -1 --format="%ai {}" {} | sort'
                 sh """
-                git log --merges --pretty=format: --name-only
+                git log --merges --first-parent --pretty=format: --name-only
                 git log --pretty=format: --abbrev-commit --since=10.hour --name-only --first-parent 
                 """
              //   sh """
