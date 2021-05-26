@@ -1,0 +1,69 @@
+{
+  "cluster_id": "1020-175757-pulse294",
+  "spark_context_id": 7406038595032202059,
+  "cluster_name": "DS_Test",
+  "spark_version": "7.3.x-scala2.12",
+  "aws_attributes": {
+    "zone_id": "us-east-1d",
+    "first_on_demand": 1,
+    "availability": "SPOT_WITH_FALLBACK",
+    "instance_profile_arn": "arn:aws:iam::096654394133:instance-profile/TFS-Databricks-EC2Role-BIDL-DETier1",
+    "spot_bid_price_percent": 100,
+    "ebs_volume_count": 0
+  },
+  "node_type_id": "i3.xlarge",
+  "driver_node_type_id": "i3.xlarge",
+  "custom_tags": {
+    "BusinessGroup": "CORP",
+    "BusinessFunction": "DataScience",
+    "costcenter": "700.7004.8562"
+  },
+  "spark_env_vars": {
+    "PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+  },
+  "autotermination_minutes": 30,
+  "enable_elastic_disk": false,
+  "disk_spec": {
+    "disk_count": 0
+  },
+  "cluster_source": "UI",
+  "init_scripts": [
+    {
+      "dbfs": {
+        "destination": "dbfs:/databricks/other_init/oracle_ctl.sh"
+      }
+    },
+    {
+      "dbfs": {
+        "destination": "dbfs:/databricks/other_init/edp_issue_init.sh"
+      }
+    }
+  ],
+  "policy_id": "665F2221AE000007",
+  "enable_local_disk_encryption": false,
+  "state": "TERMINATED",
+  "state_message": "Inactive cluster terminated (inactive for 30 minutes).",
+  "start_time": 1608081143787,
+  "terminated_time": 1608083607424,
+  "last_state_loss_time": 1608081387603,
+  "last_activity_time": 1608081358973,
+  "autoscale": {
+    "min_workers": 2,
+    "max_workers": 8
+  },
+  "default_tags": {
+    "Vendor": "Databricks",
+    "Creator": "sandeep.golla@thermofisher.com",
+    "ClusterName": "DS_Test",
+    "ClusterId": "1020-175757-pulse294"
+  },
+  "creator_user_name": "sandeep.golla@thermofisher.com",
+  "termination_reason": {
+    "code": "INACTIVITY",
+    "parameters": {
+      "inactivity_duration_min": "30"
+    },
+    "type": "SUCCESS"
+  },
+  "init_scripts_safe_mode": false
+}
