@@ -18,7 +18,7 @@ pipeline{
               //  script{
                     sshagent (credentials: ['ssh-test']){
                         sh"""
-                        ssh ubuntu@172.31.93.180 'sh script.sh apple'
+                        sh script.sh apple
                         """
                     }
                 //    sh"""
