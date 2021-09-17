@@ -17,7 +17,9 @@ pipeline{
             steps{
               //  script{
                     sshagent (credentials: ['ssh-test']){
+                        sh"""
                         ssh ubuntu@172.31.93.180 'sh script.sh apple'
+                        """
                     }
                 //    sh"""
                   //  scp file.txt ubuntu@172.31.93.180:/home/ubuntu
