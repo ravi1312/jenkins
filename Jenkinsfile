@@ -15,20 +15,14 @@ pipeline{
         //        branch 'dev'
           //  }
             steps{
-              //  script{
-                    sshagent (credentials: ['ssh-test']){
-                        sh"""
-                        ls -lrt
-                        sh script.sh apple
-                        """
-                    }
-                //    sh"""
-                  //  scp file.txt ubuntu@172.31.93.180:/home/ubuntu
-                //    ssh ubuntu@172.31.93.180 'sh script.sh apple'
+                script{
+                    sh"""
+                    scp file.txt ubuntu@172.31.93.180:/home/ubuntu
+                    ssh ubuntu@172.31.93.180 'sh script.sh apple'
                   //  #sh $WORKSPACE/ssh.sh
                   //  #ssh ubuntu@172.31.93.180 'sh script.sh apple'
-                   // """
-                //}
+                    """
+                }
             }
         }
         stage('test'){
