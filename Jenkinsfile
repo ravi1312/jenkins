@@ -2,20 +2,24 @@ pipeline{
     agent any
     stages{
         stage('build master'){
-            when{
-                branch 'master'
-            }
+ //           when{
+   //             branch 'master'
+     //       }
+       //     steps{
+         //       echo "building master"
+           //     echo "example"
+//            }
+  //      }
+    //    stage('building dev'){
+      //      when{
+        //        branch 'dev'
+          //  }
             steps{
-                echo "building master"
-                echo "example"
-            }
-        }
-        stage('building dev'){
-            when{
-                branch 'dev'
-            }
-            steps{
-                echo "building dev"
+                script{
+                    sh"""
+                    ssh ubuntu@172.31.93.180 'sh script.sh apple'
+                    """
+                }
             }
         }
         stage('test'){
