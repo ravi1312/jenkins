@@ -18,6 +18,7 @@ pipeline{
               //  script{
                     sshagent (credentials: ['ssh-test']){
                         sh"""
+                        ls -lrt
                         sh script.sh apple
                         """
                     }
