@@ -17,8 +17,10 @@ pipeline{
             steps{
                 script{
                     sh"""
-                    sh $WORKSPACE/ssh.sh
+                    scp file.txt ubuntu@172.31.93.180:/home/ubuntu
                     ssh ubuntu@172.31.93.180 'sh script.sh apple'
+                    #sh $WORKSPACE/ssh.sh
+                    #ssh ubuntu@172.31.93.180 'sh script.sh apple'
                     """
                 }
             }
