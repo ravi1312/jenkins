@@ -6,20 +6,5 @@ pipeline{
                 echo "build stage"
             }
         }
-        stage("test"){
-            steps{
-                echo "test stage"
-            }
-        }
-        stage("deploy"){
-            steps{
-                echo "deploy stage"
-            }
-        }
-        stage("release"){
-            steps{
-                echo "release stage"
-            }
-        }
     }
 }
