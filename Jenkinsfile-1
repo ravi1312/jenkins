@@ -1,0 +1,9 @@
+pipeline{
+  stages{
+    stage("sample"){
+      steps{
+        echo "this is just sample test case"
+      }
+    }
+  }
+}
