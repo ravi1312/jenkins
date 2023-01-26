@@ -18,7 +18,7 @@ pipeline{
         }
         stage("release"){
             steps{
-                echo "release stage"
+                echo "release stage in cicd"
             }
         }
     }
